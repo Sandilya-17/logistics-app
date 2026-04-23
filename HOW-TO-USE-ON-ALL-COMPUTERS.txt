@@ -1,0 +1,97 @@
+================================================================
+  LOGISTICS PRO - HOW TO USE ON ALL OFFICE COMPUTERS
+  (Simple Guide - No Technical Knowledge Needed)
+================================================================
+
+
+STEP 1 — START THE APP (Do this on ONE computer only)
+======================================================
+
+Pick ONE computer in your office to be the "main computer" (server).
+This computer must stay ON while everyone is using the app.
+
+On that one computer:
+  1. Open the logistics-enterprise folder
+  2. Double-click: START-WINDOWS.bat
+  3. A black window will open — DO NOT CLOSE IT
+  4. Wait about 30 seconds
+  5. You will see something like this:
+
+     ┌─────────────────────────────────────────────────────┐
+     │  THIS COMPUTER (server):                            │
+     │    http://localhost:3000                            │
+     │                                                     │
+     │  OTHER COMPUTERS IN THE OFFICE:                    │
+     │    http://192.168.1.5:3000    <-- WRITE THIS DOWN  │
+     └─────────────────────────────────────────────────────┘
+
+  6. Write down the "OTHER COMPUTERS" address (like 192.168.1.5:3000)
+     The numbers will be different on your network.
+
+
+STEP 2 — OPEN ON OTHER COMPUTERS (Any computer, no install needed)
+===================================================================
+
+On ANY other computer in the office:
+  1. Open a web browser (Chrome or Edge)
+  2. In the address bar at the top, type the address you wrote down
+     Example: http://192.168.1.5:3000
+  3. Press Enter
+  4. The login screen will appear!
+
+That's it! No installation needed on the other computers.
+Just a web browser is enough.
+
+
+LOGGING IN
+==========
+
+  Admin login:
+    Username: admin
+    Password: admin123
+
+  Employee login:
+    Username: employee1
+    Password: emp123
+
+IMPORTANT: Change these passwords after first use!
+  1. Login
+  2. Click the green "MY ACCOUNT" button (top right)
+  3. Click "CHANGE PASSWORD" tab
+  4. Enter current password and your new password
+
+
+STOPPING THE APP
+================
+
+When everyone is done for the day:
+  On the "main computer" (the one running the black window):
+  - Double-click: STOP-WINDOWS.bat
+    OR
+  - Close the black window
+
+
+IF SOMETHING DOES NOT WORK
+===========================
+
+Problem: Other computers cannot open the app
+Solution:
+  - Make sure the main computer is ON and the black window is open
+  - Make sure all computers are connected to the same Wi-Fi or network
+  - Try typing the address again carefully
+  - Check that Windows Firewall is not blocking port 3000:
+      1. Press Windows key, search "Windows Defender Firewall"
+      2. Click "Allow an app or feature through Windows Defender Firewall"
+      3. Click "Allow another app..." and add node.exe
+         OR temporarily turn off the firewall for testing
+
+Problem: Black window closes immediately on main computer
+Solution: Run BUILD-BACKEND.bat first, wait for it to finish, then try again
+
+Problem: "Java is not recognized" error
+Solution: Restart computer after installing Java
+
+
+================================================================
+  Need help? Contact your developer.
+================================================================

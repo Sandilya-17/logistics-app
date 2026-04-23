@@ -1,0 +1,90 @@
+================================================================
+  LOGISTICS PRO - SIMPLE INSTALLATION GUIDE
+  (Works on Windows AND Mac - Only 2 steps!)
+================================================================
+
+
+STEP 1 — Install Docker Desktop (ONE TIME ONLY)
+=================================================
+
+Docker is a free program that runs everything automatically.
+You only need to install it once.
+
+  FOR WINDOWS:
+  1. Go to: https://www.docker.com/products/docker-desktop/
+  2. Click "Download for Windows"
+  3. Open the downloaded file and click "OK" / "Next" until done
+  4. Restart your computer when asked
+  5. After restart, Docker Desktop opens automatically
+     Wait until you see a GREEN dot or "Engine running" at the bottom
+
+  FOR MAC:
+  1. Go to: https://www.docker.com/products/docker-desktop/
+  2. Click "Download for Mac"
+     (Choose "Apple Chip" if your Mac is new, "Intel" if it's older)
+  3. Open the downloaded .dmg file
+  4. Drag Docker to Applications folder
+  5. Open Docker from Applications
+     Wait until you see a whale icon in the top menu bar
+
+
+STEP 2 — Start the App
+========================
+
+  FOR WINDOWS:
+  - Double-click: START-DOCKER-WINDOWS.bat
+  - First time takes 3-5 minutes (it's downloading everything)
+  - Browser will open automatically
+
+  FOR MAC:
+  - Double-click: START-DOCKER-MAC.sh
+    (If it doesn't open, right-click → Open With → Terminal)
+  - First time takes 3-5 minutes
+  - Browser will open automatically
+
+
+LOGGING IN
+==========
+
+  Admin login:
+    Username: admin
+    Password: admin123
+
+  Change password after first login!
+  (Click "MY ACCOUNT" button, top right)
+
+
+STOPPING THE APP
+================
+
+  Windows: Double-click STOP-DOCKER-WINDOWS.bat
+  Mac:     Double-click STOP-DOCKER-MAC.sh
+
+
+FOR OTHER OFFICE COMPUTERS
+============================
+
+When the app is running, the screen shows an address like:
+  http://192.168.1.5:3000
+
+Any other computer in the office just opens that in a browser.
+No installation needed on other computers!
+
+
+IF SOMETHING GOES WRONG
+========================
+
+Problem: "Docker is not running"
+Solution: Open Docker Desktop and wait for the green light, then try again
+
+Problem: First time taking very long
+Solution: Normal! It's downloading everything. Wait 5-10 minutes.
+
+Problem: Browser shows error after opening
+Solution: Wait 30 more seconds and refresh (press F5)
+
+
+================================================================
+  That's it! No Java, no MongoDB, no Node.js to install.
+  Docker handles everything automatically.
+================================================================

@@ -1,0 +1,152 @@
+================================================================
+  LOGISTICS PRO ENTERPRISE v2.0
+  Step-by-Step Setup Guide for Windows
+  (No tech knowledge needed!)
+================================================================
+
+FIRST TIME SETUP — Do this ONCE only
+======================================
+
+You need to install 4 free programs before you can use this software.
+These are the "engines" that make the app work.
+
+--- STEP 1: Install Java 17 ---
+1. Open your web browser (Chrome / Edge)
+2. Go to this website:
+   https://adoptium.net/temurin/releases/?version=17
+3. Download the file that says:
+   Windows  |  x64  |  JDK  |  .msi
+4. Open the downloaded file and click "Next" until it finishes
+5. Done!
+
+--- STEP 2: Install Maven ---
+1. Go to: https://maven.apache.org/download.cgi
+2. Download the file that says "Binary zip archive" (apache-maven-3.x.x-bin.zip)
+3. Unzip it into: C:\Program Files\Maven\
+   (so it becomes C:\Program Files\Maven\apache-maven-3.x.x\)
+4. Now you need to add Maven to PATH:
+   a. Press Windows key, search "Environment Variables"
+   b. Click "Edit the system environment variables"
+   c. Click "Environment Variables..." button
+   d. Under "System variables", find "Path" and double-click it
+   e. Click "New" and type: C:\Program Files\Maven\apache-maven-3.x.x\bin
+      (replace 3.x.x with the actual version number you downloaded)
+   f. Click OK on all windows
+5. Done!
+
+--- STEP 3: Install Node.js ---
+1. Go to: https://nodejs.org
+2. Click the button that says "LTS" (it's the recommended one)
+3. Open the downloaded file and click "Next" until it finishes
+4. Done!
+
+--- STEP 4: Install MongoDB Community Server ---
+1. Go to: https://www.mongodb.com/try/download/community
+2. Under "MongoDB Community Server", select:
+   Version: 7.0 (or latest)
+   Platform: Windows
+   Package: MSI
+3. Click "Download"
+4. Open the downloaded file
+5. Click "Next" > "Complete" > "Next"
+   IMPORTANT: Make sure "Install MongoDB as a Service" is CHECKED
+6. Click "Next" and then "Install"
+7. Done!
+
+
+RUNNING THE APP (Every time)
+===============================
+
+After the one-time setup above is done:
+
+1. Find the folder where you saved this software
+2. Double-click: START-WINDOWS.bat
+3. A black window will open — DO NOT CLOSE IT
+4. Wait about 30 seconds
+5. Your web browser will open automatically
+6. You will see the Login screen
+
+That's it! The app is running.
+
+
+LOGGING IN
+============
+
+Default accounts:
+
+  Admin login:
+    Username: admin
+    Password: admin123
+
+  Employee login:
+    Username: employee1
+    Password: emp123
+
+IMPORTANT: Change the password after first login!
+(Click "MY ACCOUNT" button at the top right)
+
+
+STOPPING THE APP
+==================
+
+When you are done using the app:
+1. Double-click: STOP-WINDOWS.bat
+   OR
+   Close the black window that opened when you started the app
+
+
+CHANGING PASSWORD OR USERNAME
+================================
+
+Any user can change their own password or username:
+1. Login to the app
+2. Click the green "MY ACCOUNT" button in the top-right corner
+3. Choose "CHANGE PASSWORD" or "CHANGE USERNAME" tab
+4. Fill in the form and click the button
+
+
+MANAGING USERS (Admin only)
+=============================
+
+The admin can add, edit, or remove other users:
+1. Login as admin
+2. Click "User Management" in the left menu (F8)
+3. Click "+ ADD USER" to create a new user
+4. Click "Edit" next to any user to change their name/password/permissions
+5. Click "Deact." to temporarily disable a user
+
+
+IF SOMETHING GOES WRONG
+=========================
+
+Problem: Black window closes immediately
+Solution: Run BUILD-BACKEND.bat first, wait for it to finish, then try again
+
+Problem: Browser opens but shows an error
+Solution: Wait 30 more seconds and refresh the browser (press F5)
+
+Problem: "Java is not recognized" error
+Solution: Restart your computer after installing Java
+
+Problem: App was working before but not now
+Solution: 
+  1. Run STOP-WINDOWS.bat
+  2. Wait 10 seconds
+  3. Run START-WINDOWS.bat again
+
+
+FOLDER STRUCTURE (for reference)
+===================================
+
+logistics-enterprise/
+  START-WINDOWS.bat       <-- CLICK THIS TO START
+  STOP-WINDOWS.bat        <-- Click this to stop
+  BUILD-BACKEND.bat       <-- Only needed first time if start fails
+  HOW-TO-RUN-WINDOWS.txt  <-- This file
+  frontend/               <-- The website (React)
+  backend/                <-- The server (Java/Spring Boot)
+
+
+================================================================
+  Need help? Contact your IT person or developer.
+================================================================
